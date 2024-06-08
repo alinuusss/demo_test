@@ -1,0 +1,18 @@
+.products-control {
+  margin-bottom: 32px;
+}
+.products-control__btn {
+  margin-left: auto;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: $primaryLightBg;
+  display: flex;
+  align-items: center;
+
+  &:before {
+    margin-right: 16px;
+  }
+}

@@ -1,0 +1,41 @@
+.lg {
+  margin-left: 32px;
+  position: relative;
+}
+.lg__current-value {
+  height: 100%;
+  font-weight: 500;
+  cursor: pointer;
+}
+.lg__icon {
+  margin-right: 14px;
+}
+.lg__dropdown {
+  position: absolute;
+  top: 36px;
+  border-radius: 6px;
+  min-width: 60px;
+  padding: 6px 14px;
+  font-weight: 500;
+  cursor: pointer;
+  right: 0;
+  background: #fff;
+  box-shadow: 0 4px 10px #00000042;
+  transition: all .05s;
+  visibility: hidden;
+  opacity: 0;
+}
+.lg:hover {
+  .lg__dropdown  {
+    top: 42px;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+.lg__dropdown-item {
+  padding: 2px 0;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,17 @@
+.btn {
+  outline: none;
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 10px;
+  outline: none;
+  padding: 9px 16px;
+}
+
+.btn_red {
+  border: none;
+  background: $btnColor;
+}
+.btn_outline {
+  background: #fff;
+  border: 1px solid $btnColor;
+}

@@ -1,0 +1,52 @@
+.sidebar {
+  background: $primaryBg;
+  width: 256px;
+  position: fixed;
+  height: 100%;
+}
+
+.sidebar__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 24px;
+  margin-left: 20px;
+  color: $primaryLightBg;
+  padding: 30px;
+}
+.sidebar__link {
+  display: flex;
+  align-items: center;
+  color: darken($primaryLightBg, 45%);
+  text-decoration: none;
+  font-weight: 500;
+  margin-bottom: 16px;
+  padding: 12px 30px 12px 32px;
+  transition: all .1s;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:hover {
+    background: darken($primaryLightBg, 60%);
+    color: $primaryLightBg;
+  }
+
+  &.active {
+    background: darken($primaryLightBg, 60%);
+    color: $primaryLightBg;
+  }
+}
+.sidebar__nav-list {
+  margin-top: 102px;
+}
+.sidebar__bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: inline-block;
+  background: url("@/assets/images/bg-sidebar.png") no-repeat;
+  background-size: 100%;
+  width: 256px;
+  height: 235px;
+}

@@ -1,0 +1,60 @@
+%sidebarIcon {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 20px;
+}
+
+._icon_profile::before {
+  @extend %sidebarIcon;
+  background: url("@/assets/images/icons/user.svg") no-repeat;
+  background-size: 100%;
+}
+._icon_products::before {
+  @extend %sidebarIcon;
+  background: url("@/assets/images/icons/rim.svg") no-repeat;
+  background-size: 100%;
+}
+._icon_setting::before {
+  @extend %sidebarIcon;
+  background: url("@/assets/images/icons/settings.svg") no-repeat;
+  background-size: 100%;
+}
+
+.icon_plus::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+}
+
+.icon_plus_red::before {
+  background: url("@/assets/images/icons/plus.svg") no-repeat;
+  background-size: 100%;
+}
+.icon_plus_white::before {
+  background: url("@/assets/images/icons/plus-white.svg") no-repeat;
+  background-size: 100%;
+}
+
+.chevron_icon::after {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-left: 3px;
+}
+.chevron_down_icon::after {
+  background: url("@/assets/images/icons/chevron_down.svg") no-repeat;
+  background-size: 100%;
+}
+
+.zoom_icon::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url("@/assets/images/icons/zoom.svg") no-repeat;
+  background-size: 100%;
+}

@@ -1,0 +1,61 @@
+@import "variables";
+@import "fonts";
+
+@import "views/views";
+@import "elements/elements";
+@import "components/components";
+@import "core/core";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "DM Sans" , sans-serif;
+}
+
+.row {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+html, body {
+  height: 100%;
+}
+.app {
+  height: 100%;
+}
+.p_rel {
+  position: relative;
+}
+.row_center {
+  align-items: center;
+}
+.items {
+  margin-left: -30px;
+}
+.app__content {
+  width: 100%;
+  margin-left: 256px;
+}
+.page__header {
+  padding: 30px;
+  border-bottom: 1px solid $borderColor;
+  margin-bottom: 36px;
+}
+.page {
+  padding: 0 30px 40px 0;
+}
+.app__content {
+  max-width: 1154px;
+  position: relative;
+}
+.container {
+  padding-left: 30px;
+}
