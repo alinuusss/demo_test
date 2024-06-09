@@ -1,39 +1,29 @@
 import { fileURLToPath, URL } from 'node:url'
 
-import { defineConfig } from 'vite'
+import { defineConfig, loadEnv } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import {VitePWA} from "vite-plugin-pwa";
 
 // https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [
-    vue({
-      template: {
-        transformAssetUrls: {
-          base: null,
-          includeAbsolute: false,
-        },
-      },
-    }),
+export default defineConfig(({command, mode}) => {
 
-    VitePWA({
-      srcDir: "src",
-      filename: "service-worker.js",
-      strategies: "injectManifest",
-      injectRegister: false,
-      manifest: false,
-      injectManifest: {
-        injectionPoint: null,
-      },
-      devOptions: {
-        enabled: true
+  const env = loadEnv(mode, process.cwd(), '');
+
+  return {
+    plugins: [
+      vue({
+        template: {
+          transformAssetUrls: {
+            base: null,
+            includeAbsolute: false,
+          },
+        },
+      }),
+    ],
+    base: env.BASE_URL,
+    resolve: {
+      alias: {
+        '@': fileURLToPath(new URL('./src', import.meta.url))
       }
-    }),
-  ],
-  base: '/',
-  resolve: {
-    alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   }
-})
+});
