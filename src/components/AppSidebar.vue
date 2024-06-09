@@ -1,4 +1,4 @@
-<script setup type="module">
+<script setup>
 
 import {ref} from 'vue';
 import sidebarLinks from "@/sidebar/sidebarConfig.js";

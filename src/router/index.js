@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import ProductList from "../views/products/ProductList.vue";
-import Profile from "../views/profile/Profile.vue";
-import Setting from "../views/setting/Setting.vue";
+import ProductList from "@/views/products/ProductList.vue";
+import Profile from "@/views/profile/Profile.vue";
+import Setting from "@/views/setting/Setting.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),

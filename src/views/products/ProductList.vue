@@ -1,11 +1,11 @@
-<script setup type="module">
+<script setup>
 
 import {ref} from 'vue';
 
-import ProductItem from "../../views/products/components/ProductItem.vue";
-import ProductsControl from "../../views/products/components/ProductsControl.vue";
-import {useParamsStore} from "../../store/params.js";
-import ProductApi from "../../api/product.js";
+import ProductItem from "@/views/products/components/ProductItem.vue";
+import ProductsControl from "@/views/products/components/ProductsControl.vue";
+import {useParamsStore} from "@/store/params.js";
+import ProductApi from "@/api/product.js";
 
 let paramsStore = useParamsStore();
 

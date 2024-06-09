@@ -1,4 +1,4 @@
-import { fileURLToPath, URL } from 'node:url'
+import { fileURLToPath, URL } from "url";
 
 import path from 'path';
 import { defineConfig, loadEnv } from 'vite'
@@ -20,11 +20,6 @@ export default defineConfig(({command, mode}) => {
           },
         },
       }),
-      // VueI18n({
-      //   // you need to set i18n resource including paths !
-      //   include: path.resolve(__dirname, './path/to/src/locales/**')
-      // })
-
     ],
     base: env.VITE_BASE_URL,
     resolve: {
