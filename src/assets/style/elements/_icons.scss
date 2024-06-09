@@ -58,3 +58,23 @@
   background: url("@/assets/images/icons/zoom.svg") no-repeat;
   background-size: 100%;
 }
+
+.icon_more {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url("@/assets/images/icons/more_horizontal.svg") no-repeat;
+  background-size: 100%;
+}
+
+.success_icon::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("@/assets/images/icons/check.svg") no-repeat;
+  background-size: 100%;
+  margin-right: 8px;
+  position: relative;
+  top: 3px;
+}

@@ -12,7 +12,7 @@ const links = ref(sidebarLinks);
   <div class="sidebar">
 
     <div class="sidebar__title">
-      Demo Test
+      {{ $t('mainTitle') }}
     </div>
 
     <div class="sidebar__nav-list" v-if="links.length">
@@ -21,11 +21,11 @@ const links = ref(sidebarLinks);
                      :to="{ name: link.url }"
                      :class="['sidebar__link', link.icon]"
         >
-          {{ link.name }}
+          {{ $t(`nav.${link.name}`) }}
         </router-link>
 
         <a :href="link.url" v-else :class="['sidebar__link', link.icon]">
-           {{ link.name }}
+          {{ $t(`nav.${link.name}`) }}
         </a>
       </template>
     </div>

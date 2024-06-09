@@ -18,6 +18,7 @@ let emit = defineEmits(['getProducts']);
 let currentPage = ref(props.pagination?.per_page ? props.pagination?.per_page : 9);
 
 function loadProducts(i) {
+  paramsStore.setPageParams(1);
   paramsStore.setPerPageParams(i);
   currentPage.value = i;
   emit('getProducts', paramsStore.params);
@@ -33,10 +34,10 @@ function searchProducts() {
 <template>
 
   <div class="row row_center products-control">
-    <app-search placeholder="Search VIN" @searchProducts="searchProducts"></app-search>
+    <app-search :placeholder="$t('searchPlaceholder')" @searchProducts="searchProducts"></app-search>
 
     <div class="row row_center sorting-page">
-      Select vehicles per page:
+      {{ $t('sortingValue') }}:
 
       <div class="select">
         <div class="select__current-value input chevron_icon chevron_down_icon">{{ currentPage }}</div>
@@ -51,7 +52,7 @@ function searchProducts() {
     </div>
 
     <button class="btn btn_red products-control__btn icon_plus icon_plus_white">
-      Add Vechicle
+      {{ $t('btnText') }}
     </button>
   </div>
 

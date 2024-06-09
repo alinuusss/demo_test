@@ -27,19 +27,6 @@ function searchProduct() {
 
 let searchDebounce = debounce(searchProduct, 400);
 
-function handleInput(e) {
-  if (e.key === "Backspace" || e.key === "Delete") {
-    searchProduct();
-  }
-}
-
-watch(() => searchString.value, debounce((val) => {
-  if (!val) {
-    searchProduct();
-  }
-}, 400))
-
-
 </script>
 
 <template>
@@ -51,7 +38,6 @@ watch(() => searchString.value, debounce((val) => {
            :placeholder="placeholder"
            v-model="searchString"
            @input="searchDebounce"
-           @keyup.delete="handleInput"
     >
     <button class="search__btn zoom_icon"></button>
 

@@ -5,6 +5,7 @@ let sidebarLinks = [
         target: false,
         disabled: false,
         icon: '_icon_profile',
+        isActive: (route) => route === 'profile',
         childrenLinks: []
     },
     {
@@ -12,7 +13,8 @@ let sidebarLinks = [
         url: 'products',
         target: false,
         disabled: false,
-        icon: '_icon_products active',
+        icon: '_icon_products',
+        isActive: (route) => route === 'products',
         childrenLinks: []
     },
     {
@@ -20,6 +22,7 @@ let sidebarLinks = [
         url: 'setting',
         target: false,
         disabled: false,
+        isActive: (route) => route === 'products',
         icon: '_icon_setting',
         childrenLinks: []
     }
