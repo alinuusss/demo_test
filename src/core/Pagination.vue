@@ -1,4 +1,4 @@
-<script setup>
+<script setup type="module">
 
 let emit = defineEmits(['load']);
 import {useParamsStore} from "@/store/params.js";
@@ -34,7 +34,7 @@ function nextPage() {
   <div class="pagination-wrap" v-if="pagination && pagination.total !== 1">
 
     <div class="pagination__text">
-<!--      {{ $t('paginationShowing') }} {{ pagination.to }} {{ $t('paginationOut') }} {{ pagination.total }}-->
+      {{ $t('paginationShowing') }} {{ pagination.to }} {{ $t('paginationOut') }} {{ pagination.total }}
     </div>
 
     <ul class="pagination">
@@ -48,7 +48,7 @@ function nextPage() {
         </div>
       </li>
       <li class="pagination__item pagination_of">
-<!--        {{ $t('paginationOf') }}-->
+        {{ $t('paginationOf') }}
       </li>
       <li class="pagination__item">
         <div class="pagination__link" :class="{disabled : pagination.current_page >= props.pagination.last_page}">

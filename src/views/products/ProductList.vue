@@ -1,4 +1,4 @@
-<script setup>
+<script setup type="module">
 
 import {ref} from 'vue';
 
@@ -50,8 +50,8 @@ function verifyName(products) {
 
     <div class="page__header">
       <h1 class="title">
-<!--        {{ $t('title') }}-->
-        123</h1>
+        {{ $t('title') }}
+      </h1>
     </div>
 
     <div class="container">

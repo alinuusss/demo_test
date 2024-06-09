@@ -1,4 +1,4 @@
-<script setup>
+<script setup type="module">
 
 import {ref, watch} from 'vue';
 let emit = defineEmits(['searchProducts'])

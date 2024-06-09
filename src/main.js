@@ -1,7 +1,7 @@
 import './assets/style/app.scss'
 
 import { createApp } from 'vue'
-// import { createI18n } from 'vue-i18n'
+import { createI18n } from 'vue-i18n'
 
 import { createPinia } from 'pinia';
 import languages from "@/helpers/languages.js";
@@ -18,13 +18,13 @@ const app = createApp(App)
     .use(router)
     .use(pinia)
 
-// const i18n = createI18n({
-//     ...languages
-// })
+const i18n = createI18n({
+    ...languages
+})
 
 app.component('AppPreloader', AppPreloader);
 app.component('AppPagination', AppPagination);
 
-// app.use(i18n)
+app.use(i18n)
 app.mount('#app')
 

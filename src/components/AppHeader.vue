@@ -1,9 +1,9 @@
-<script setup>
-//
-//import {useI18n} from "vue-i18n";
-//let test = useI18n();
+<script setup type="module">
 
-import {onMounted, ref} from 'vue';
+import {useI18n} from "vue-i18n";
+let test = useI18n();
+
+import {ref} from 'vue';
 import {useLgStore} from "@/store/language.js";
 
 let language = useLgStore();
@@ -15,19 +15,19 @@ function setLg(lg) {
   language.setLanguage(lg);
 }
 
-// if (!localStorage.hasOwnProperty('lg')) {
-//   localStorage.setItem('lg', 'En');
-//   language.setLanguage('En');
-//   test.locale.value = language.lg;
-// }
-//
-// if (localStorage.getItem('lg') === 'En') {
-//   language.setLanguage('En');
-//   test.locale.value = language.lg;
-// } else {
-//   language.setLanguage('Ru');
-//   test.locale.value = language.lg;
-// }
+if (!localStorage.hasOwnProperty('lg')) {
+  localStorage.setItem('lg', 'En');
+  language.setLanguage('En');
+  test.locale.value = language.lg;
+}
+
+if (localStorage.getItem('lg') === 'En') {
+  language.setLanguage('En');
+  test.locale.value = language.lg;
+} else {
+  language.setLanguage('Ru');
+  test.locale.value = language.lg;
+}
 
 </script>
 

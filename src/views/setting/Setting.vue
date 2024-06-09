@@ -1,4 +1,4 @@
-<script setup>
+<script setup type="module">
 
 </script>
 

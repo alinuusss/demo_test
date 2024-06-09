@@ -1,4 +1,4 @@
-<script setup>
+<script setup type="module">
 
 import {ref} from 'vue';
 import AppSearch from "@/core/AppSearch.vue";
@@ -34,11 +34,10 @@ function searchProducts() {
 <template>
 
   <div class="row row_center products-control">
-    <app-search  @searchProducts="searchProducts"></app-search>
-<!--    :placeholder="$t('searchPlaceholder')"-->
+    <app-search :placeholder="$t('searchPlaceholder')" @searchProducts="searchProducts"></app-search>
 
     <div class="row row_center sorting-page">
-<!--      {{ $t('sortingValue') }} -->
+      {{ $t('sortingValue') }}
       122:
 
       <div class="select">
@@ -54,8 +53,7 @@ function searchProducts() {
     </div>
 
     <button class="btn btn_red products-control__btn icon_plus icon_plus_white">
-<!--      {{ $t('btnText') }} -->
-      22
+      {{ $t('btnText') }}
     </button>
   </div>
 
