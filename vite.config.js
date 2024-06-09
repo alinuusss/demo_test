@@ -24,13 +24,9 @@ export default defineConfig(({command, mode}) => {
     base: env.VITE_BASE_URL,
     resolve: {
       alias: {
-        '@': fileURLToPath(new URL('./src', import.meta.url))
+        '@': fileURLToPath(new URL('./src', import.meta.url)),
+        vue: 'vue/dist/vue.esm-bundler.js',
       }
     },
-    server: {
-      hmr: {
-        path: '/',
-      }
-    }
   }
 });
