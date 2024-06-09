@@ -15,11 +15,6 @@ function setLg(lg) {
   language.setLanguage(lg);
 }
 
-onMounted(() => {
-  localStorage.setItem('lg', newValue);
-  test.locale.value = language.lg;
-})
-
 if (!localStorage.hasOwnProperty('lg')) {
   localStorage.setItem('lg', 'En');
   language.setLanguage('En');
