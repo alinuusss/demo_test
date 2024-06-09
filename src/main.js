@@ -25,30 +25,6 @@ const i18n = createI18n({
 app.component('AppPreloader', AppPreloader);
 app.component('AppPagination', AppPagination);
 
-if ('serviceWorker' in navigator) {
-
-    let baseurl = import.meta.env.BASE_URL;
-
-    if (baseurl === '/') {
-        baseurl = '';
-    }
-
-    navigator.serviceWorker.register(
-        import.meta.env.MODE === 'production' ? (baseurl + '/service-worker.js') : '/dev-sw.js?dev-sw',
-        {
-            type: import.meta.env.MODE === 'production' ? 'classic' : 'module'
-        }
-    )
-        .then((reg) => {
-
-            setInterval(() => {
-                reg.update();
-            }, 3 * 60 * 60 * 1000) // 3h
-
-        });
-
-}
-
 app.use(i18n)
 app.mount('#app')
 
