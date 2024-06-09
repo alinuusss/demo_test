@@ -28,13 +28,6 @@ export default defineConfig(({command, mode}) => {
         vue: 'vue/dist/vue.esm-bundler.js',
       }
     },
-    build: {
-      lib: {
-        name: 'demo_test',
-        entry: resolve(__dirname, './src/main.js'),
-        fileName: (format) => `demo_test.${format}.js`,
-      },
-    },
     server: {
       hmr: {
         protocol: 'ws',
