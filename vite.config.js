@@ -18,11 +18,29 @@ export default defineConfig(({command, mode}) => {
           },
         },
       }),
+      // VitePWA({
+      //   srcDir: "src",
+      //   filename: "service-worker.js",
+      //   strategies: "injectManifest",
+      //   injectRegister: false,
+      //   manifest: false,
+      //   injectManifest: {
+      //     injectionPoint: null,
+      //   },
+      //   devOptions: {
+      //     enabled: true
+      //   }
+      // }),
     ],
     base: env.BASE_URL,
     resolve: {
       alias: {
         '@': fileURLToPath(new URL('./src', import.meta.url))
+      }
+    },
+    server: {
+      hmr: {
+        path: '/',
       }
     }
   }
