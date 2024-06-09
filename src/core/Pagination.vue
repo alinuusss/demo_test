@@ -1,7 +1,7 @@
 <script setup type="module">
 
 let emit = defineEmits(['load']);
-import {useParamsStore} from "@/store/params.js";
+import {useParamsStore} from "../store/params.js";
 
 let paramsStore = useParamsStore();
 

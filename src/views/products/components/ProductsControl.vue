@@ -1,8 +1,8 @@
 <script setup type="module">
 
 import {ref} from 'vue';
-import AppSearch from "@/core/AppSearch.vue";
-import {useParamsStore} from "@/store/params.js";
+import AppSearch from "../../../core/AppSearch.vue";
+import {useParamsStore} from "../../../store/params.js";
 
 let paramsStore = useParamsStore();
 

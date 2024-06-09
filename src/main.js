@@ -4,13 +4,13 @@ import { createApp } from 'vue'
 import { createI18n } from 'vue-i18n'
 
 import { createPinia } from 'pinia';
-import languages from "@/helpers/languages.js";
+import languages from "./helpers/languages.js";
 
 import App from './App.vue'
 import router from './router';
 
-import AppPreloader from "@/core/AppPreloader.vue";
-import AppPagination from "@/core/Pagination.vue";
+import AppPreloader from "./core/AppPreloader.vue";
+import AppPagination from "./core/Pagination.vue";
 
 const pinia = createPinia();
 

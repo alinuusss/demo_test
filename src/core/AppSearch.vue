@@ -2,7 +2,7 @@
 
 import {ref, watch} from 'vue';
 let emit = defineEmits(['searchProducts'])
-import {useParamsStore} from "@/store/params.js";
+import {useParamsStore} from "../store/params.js";
 import debounce from 'lodash/debounce.js';
 
 let paramsStore = useParamsStore();
