@@ -49,7 +49,9 @@ function verifyName(products) {
   <div class="page">
 
     <div class="page__header">
-      <h1 class="title">{{ $t('title') }}</h1>
+      <h1 class="title">
+<!--        {{ $t('title') }}-->
+        123</h1>
     </div>
 
     <div class="container">

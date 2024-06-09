@@ -34,10 +34,12 @@ function searchProducts() {
 <template>
 
   <div class="row row_center products-control">
-    <app-search :placeholder="$t('searchPlaceholder')" @searchProducts="searchProducts"></app-search>
+    <app-search  @searchProducts="searchProducts"></app-search>
+<!--    :placeholder="$t('searchPlaceholder')"-->
 
     <div class="row row_center sorting-page">
-      {{ $t('sortingValue') }}:
+<!--      {{ $t('sortingValue') }} -->
+      122:
 
       <div class="select">
         <div class="select__current-value input chevron_icon chevron_down_icon">{{ currentPage }}</div>
@@ -52,7 +54,8 @@ function searchProducts() {
     </div>
 
     <button class="btn btn_red products-control__btn icon_plus icon_plus_white">
-      {{ $t('btnText') }}
+<!--      {{ $t('btnText') }} -->
+      22
     </button>
   </div>
 
