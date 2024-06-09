@@ -1,6 +1,6 @@
 import { fileURLToPath, URL } from "url";
 
-import path from 'path';
+import { resolve } from 'path';
 import { defineConfig, loadEnv } from 'vite'
 import vue from '@vitejs/plugin-vue';
 // import VueI18n from '@intlify/vite-plugin-vue-i18n'
@@ -28,5 +28,28 @@ export default defineConfig(({command, mode}) => {
         vue: 'vue/dist/vue.esm-bundler.js',
       }
     },
+    build: {
+      lib: {
+        name: 'vue3-module',
+        entry: resolve(__dirname, 'src/main.js'),
+        fileName: (format) => `vue3-module.${format}.js`,
+      },
+      emptyOutDir: true,
+      rollupOptions: {
+        external: ['vue'],
+        output: {
+          exports: 'named',
+          globals: {
+            vue: 'Vue',
+          },
+        },
+      },
+    },
+    server: {
+      hmr: {
+        protocol: 'ws',
+      },
+    },
   }
+
 });
