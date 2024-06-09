@@ -30,9 +30,9 @@ export default defineConfig(({command, mode}) => {
     },
     build: {
       lib: {
-        name: 'vue3-module',
-        entry: resolve(__dirname, 'src/main.js'),
-        fileName: (format) => `vue3-module.${format}.js`,
+        name: 'demo_test',
+        entry: resolve(__dirname, '/src/main.js'),
+        // fileName: (format) => `demo_test.${format}.js`,
       },
       emptyOutDir: true,
       rollupOptions: {
