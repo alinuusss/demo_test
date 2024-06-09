@@ -31,18 +31,8 @@ export default defineConfig(({command, mode}) => {
     build: {
       lib: {
         name: 'demo_test',
-        entry: resolve(__dirname, '/src/main.js'),
-        // fileName: (format) => `demo_test.${format}.js`,
-      },
-      emptyOutDir: true,
-      rollupOptions: {
-        external: ['vue'],
-        output: {
-          exports: 'named',
-          globals: {
-            vue: 'Vue',
-          },
-        },
+        entry: resolve(__dirname, './src/main.js'),
+        fileName: (format) => `demo_test.${format}.js`,
       },
     },
     server: {
